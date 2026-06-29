@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-outreach-005",
+  "title": "Adopter outreach + accepted-source shortlist",
+  "project": "genome-browser-tracks",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "genome-browser-tracks defines success as delivered, not merged — a track pack that nobody loads is not an outcome. No named lab, educator, browser project, or advocacy org has yet confirmed they will adopt a pack (verifiedNeed is false for all tasks). M0 requires at least one adopter-outreach thread to be opened in parallel with the pilot build, so the adoption blocker is surfaced early and not discovered only after packs are produced.",
+  "objective": "Open at least one outreach thread with a candidate adopter (academic cancer-genomics lab, bioinformatics course instructor, genome-browser project, or patient-advocacy org), and produce a committed document summarising the outreach status and the accepted-source shortlist for M0/M1 pack selection.",
+  "acceptanceCriteria": [
+    "At least one concrete outreach thread is opened with a named candidate adopter (lab, educator, browser project, or advocacy org) and documented with contact, date, and status.",
+    "The outreach document describes the adoption mechanism offered (self-serve hub URL, hub registry listing, lesson integration, or repo reference).",
+    "The accepted-source shortlist identifies the M0 pilot source (Open Targets CC0) and candidate M1 sources (CIViC CC0, ClinVar PD) with their license disposition and why they are Priority-A.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §2 (Problem & beneficiaries — partner org channels)",
+    "PLAN.md §7 (Data, licensing & compliance — source matrix)",
+    "UCSC public hub registry; JBrowse plugin/config registry"
+  ],
+  "output": "review/outreach-005-status.md — committed outreach status document and accepted-source shortlist for M0/M1.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

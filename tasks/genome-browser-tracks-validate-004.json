@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-validate-004",
+  "title": "Track/format + render validation tooling (validateFiles/hubCheck wrappers)",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["genomics", "bioinformatics", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The coordinate/assembly gate and pack Definition of Shipped both require format validation using standard bioinformatics tools (UCSC validateFiles, hubCheck, tabix) to ensure tracks are correctly formatted and loadable before they are hosted. These tools need to be wrapped in thin TypeScript scripts so they can be called consistently from CI and from per-pack build scripts. This task ships those wrappers with CI-exercised golden fixtures using only tiny synthetic inputs.",
+  "objective": "Implement TypeScript wrapper scripts around validateFiles, hubCheck, bgzip+tabix, and bigBed format validators, with CI tests using synthetic golden fixtures covering correct inputs and deliberate malformed inputs that must fail.",
+  "acceptanceCriteria": [
+    "Wrappers exist for validateFiles/hubCheck (UCSC), bgzip+tabix (htslib), and bigBed format validation.",
+    "CI tests include golden fixtures with correct synthetic BED/bigBed/VCF inputs (must pass) and deliberate malformed inputs (bad coordinate, wrong chrom name, out-of-bounds) that must fail.",
+    "At least one assembly-mismatch fixture that must be caught is included.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials embedded; commit is DCO signed-off."
+  ],
+  "resources": [
+    "UCSC userApps documentation (validateFiles, hubCheck, bedToBigBed, fetchChromSizes)",
+    "htslib documentation (bgzip, tabix)",
+    "PLAN.md §8 (Test fixtures & golden files)"
+  ],
+  "output": "packages/validate/src/ — TypeScript validation wrappers; packages/validate/test/ golden fixtures for correct and malformed inputs; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ds-opentargets-005",
+  "title": "Open Targets driver/target evidence track pack (hg38)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Open Targets is a CC0-licensed platform aggregating drug target and disease association evidence including cancer driver gene evidence from multiple open sources. It is the primary source for the M0 pilot pack (pilot-006); this source-catalog entry records the per-source gate triage for the broader Open Targets dataset beyond the pilot, enabling future packs to draw on additional target evidence layers without repeating the license gate.",
+  "objective": "Apply the licensegate-002 gate to the full Open Targets dataset, produce a committed PASS artifact, and deliver an Open Targets cancer target-evidence track pack on hg38 complementary to pilot-006.",
+  "acceptanceCriteria": [
+    "Source is Open Targets Platform (CC0); licensegate-002 PASS artifact committed with permitsRedistribution: true and nonCommercial: false with cited clause/URL.",
+    "coordgate-003 PASS artifact committed for hg38; coordinate convention handled and recorded.",
+    "All three browser targets emitted and render-verified; Open Targets cancer-target features appear at expected loci on hg38 with evidence in outcomes/ds-opentargets-005.json.",
+    "Per-feature provenance records Open Targets target IDs, source release version, and CC0 license; provenance completeness score ≥ 90/100.",
+    "Pack carries not-medical-advice notice; hosted at a loadable URL; adoption evidence or blocker recorded."
+  ],
+  "resources": [
+    "Open Targets Platform data downloads (CC0): https://platform.opentargets.org/downloads",
+    "PLAN.md §7 (Open Targets source entry — Accept A)",
+    "tasks/genome-browser-tracks-catalog-014.json",
+    "tasks/genome-browser-tracks-pilot-006.json"
+  ],
+  "output": "output/packs/opentargets-cancer-hg38/ — track files, browser configs, gate artifacts, manifest, and outcomes/ds-opentargets-005.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

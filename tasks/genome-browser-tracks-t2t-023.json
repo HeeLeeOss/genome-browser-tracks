@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-t2t-023",
+  "title": "T2T-CHM13 assembly support",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["genomics", "bioinformatics", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The Telomere-to-Telomere (T2T) CHM13 assembly fills gaps in hg38 and is increasingly adopted as an alternative reference, particularly for regions poorly represented in GRCh38. Adding T2T support would extend the project's reach to researchers using this assembly. Per PLAN.md, T2T is deferred until hg38/hg19 support is mature; this backlog task is scoped for when/if T2T enters scope. Coordinate/assembly correctness (the coordgate) is especially important for T2T due to the novel loci relative to hg38.",
+  "objective": "Add T2T-CHM13 as a supported assembly in the manifest model and liftOver pipeline, with appropriate coordgate tooling, and update at least one existing pack to emit T2T coordinates.",
+  "acceptanceCriteria": [
+    "T2T-CHM13 is added as a supported assembly option in the canonical manifest model with assembly id and source recorded.",
+    "liftOver path from hg38 to T2T-CHM13 (or T2T-native source if available) is implemented with chain provenance and unmapped report.",
+    "coordgate-003 is updated to handle T2T-CHM13 chrom names and coordinate validation.",
+    "At least one existing pack is extended to emit T2T coordinates alongside hg38/hg19, render-verified.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off."
+  ],
+  "resources": [
+    "T2T-CHM13 assembly: https://github.com/marbl/CHM13",
+    "PLAN.md (Open questions — T2T support deferred)",
+    "tasks/genome-browser-tracks-liftover-010.json"
+  ],
+  "output": "packages/manifest/src/ and packages/liftover/src/ — T2T assembly support additions; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-refresh-022",
+  "title": "Source-release refresh + re-validation process",
+  "project": "genome-browser-tracks",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Track packs are versioned to their source release — when a source publishes a new release (e.g. a new GENCODE version or a CIViC data dump), the affected packs may become stale or incorrect. Without a documented refresh process, packs silently age. M3 requires a documented source-release refresh process and a named steward for ongoing liaison, so stale packs are caught and re-validated as maintenance tasks rather than silently left in place.",
+  "objective": "Document the source-release refresh process: how to detect a source's new release, which packs are affected, how to re-validate (re-run gates + validators + render check), and how stale packs become maintenance tasks.",
+  "acceptanceCriteria": [
+    "Documents the detection step: how to monitor each approved source for new releases (e.g. GitHub releases, FTP changelogs, NCBI announcements) and how to determine which packs are affected.",
+    "Documents the re-validation procedure: re-run licensegate-002 and coordgate-003, rebuild track files, re-run validateFiles/hubCheck, and re-execute the render check — producing updated gate artifacts.",
+    "Documents how a stale pack transitions to a maintenance task in the backlog, with the old version deprecated and the new version noted.",
+    "Names the Steward responsible for monitoring source releases and initiating refresh tasks.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §15 (Sustainability & maintenance)",
+    "PLAN.md (Risk table — source release changes annotations)",
+    "tasks/genome-browser-tracks-validate-004.json"
+  ],
+  "output": "review/refresh-022-process.md — committed source-release refresh process document with named steward and per-source monitoring checklist.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "ds-gnomad-007",
+  "title": "gnomAD population allele frequency context track pack (hg38)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "gnomAD (Genome Aggregation Database) provides population allele frequencies from aggregated exome and genome sequencing data. gnomAD data is freely available with no redistribution restriction (verify at gate per PLAN.md). In cancer genomics, gnomAD frequencies are used to distinguish rare somatic variants from common germline polymorphisms, making a gnomAD frequency context track a useful overlay alongside somatic variant tracks. The source is aggregate/de-identified by design; the re-identification check is expected to PASS.",
+  "objective": "Apply the licensegate-002 gate to gnomAD (including re-identification check), produce a committed PASS artifact, and deliver a gnomAD allele frequency context track on hg38 with per-feature provenance.",
+  "acceptanceCriteria": [
+    "Source is gnomAD; licensegate-002 PASS artifact committed with permitsRedistribution: true confirmed via cited clause/URL (verify at gate per PLAN.md).",
+    "Re-identification check run and PASS recorded (gnomAD is an aggregate/de-identified source by design).",
+    "coordgate-003 PASS artifact committed for hg38; coordinate convention (VCF 1-based) handled and recorded.",
+    "All three browser targets emitted and render-verified; gnomAD frequency features appear at expected variant loci on hg38 with evidence in outcomes/ds-gnomad-007.json.",
+    "Per-feature provenance records gnomAD variant IDs, source release version, and license; provenance completeness score ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "gnomAD data downloads: https://gnomad.broadinstitute.org/downloads",
+    "PLAN.md §7 (gnomAD source entry — Accept A, verify at gate)",
+    "tasks/genome-browser-tracks-catalog-014.json"
+  ],
+  "output": "output/packs/gnomad-allele-freq-hg38/ — bigWig/VCF track file(s), browser configs, gate artifacts, manifest, and outcomes/ds-gnomad-007.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

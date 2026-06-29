@@ -1,0 +1,31 @@
+{
+  "id": "ds-depmap-013",
+  "title": "DepMap cancer dependency/cell-line context track pack (per-source gate required)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "DepMap (the Cancer Dependency Map) provides cell-line dependency and CRISPR-screen data, with some datasets released under CC-BY and others under more restricted terms. This is a Priority-B source: redistribution rights for derivative tracks must be verified per-dataset before any pack is built. The catalog-014 triage resolves which DepMap datasets are APPROVED. A DepMap dependency track provides research context (which cancer cell lines depend on a gene) but is not a direct cancer variant annotation — it adds a functional genomics layer.",
+  "objective": "Verify redistribution rights for a specific DepMap dataset through catalog-014, run the licensegate-002 gate, and if APPROVED, deliver a DepMap cancer dependency context track on hg38.",
+  "acceptanceCriteria": [
+    "A specific DepMap dataset is confirmed APPROVED in catalog-014 with cited redistribution terms (CC-BY or verified equivalent) and permitsRedistribution: true (or marked EXCLUDED if terms cannot be confirmed).",
+    "licensegate-002 and coordgate-003 PASS artifacts committed; re-identification check PASS recorded (cell-line aggregate data confirmed).",
+    "If gate FAILS, task is EXCLUDED with the reason documented and no track is built.",
+    "If gate PASSES: all three browser targets emitted and render-verified; per-feature provenance records DepMap gene IDs, dataset version, and license; provenance completeness ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "DepMap data downloads: https://depmap.org/portal/download/",
+    "PLAN.md §7 (DepMap — Verify B → gate)",
+    "tasks/genome-browser-tracks-catalog-014.json"
+  ],
+  "output": "output/packs/depmap-dependency-hg38/ — track files, browser configs, gate artifacts, manifest, and outcomes/ds-depmap-013.json (or EXCLUDED record if gate fails).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

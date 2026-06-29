@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-catalog-014",
+  "title": "Triage the source catalog into an approved source shortlist",
+  "project": "genome-browser-tracks",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "open-science", "licensing"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Before building M2+ packs, every candidate annotation source must be triaged through the license+data-tier gate. The source catalog in PLAN.md §7 contains Priority-A (clearly-redistributable), Priority-B (verify per-source), and Priority-C (excluded) sources. This triage task applies the gate to each candidate and produces a committed shortlist of approved sources with one gate artifact per decision — this shortlist then drives which M2 packs are built.",
+  "objective": "Triage all sources in the PLAN.md §7 catalog through the license+data-tier gate, producing a committed shortlist of ≥6 APPROVED sources with one gate artifact per decision, and explicit EXCLUDED records for non-commercial/controlled-access sources.",
+  "acceptanceCriteria": [
+    "Every catalog source is assigned a disposition: APPROVED (open tier + permitsRedistribution: true with cited clause/URL), VERIFY-LATER, or EXCLUDED (non-commercial/controlled-access/non-redistributable).",
+    "COSMIC, Cancer Gene Census, and OncoKB are recorded as EXCLUDED (non-commercial); all controlled-access sources (dbGaP, EGA) are EXCLUDED.",
+    "Priority-B sources (GDC-open, cBioPortal, cancer hotspots, DepMap) are resolved per-source with cited terms; unresolved sources stay VERIFY-LATER (not promoted to packs).",
+    "Output is a committed shortlist with ≥6 APPROVED sources, each with a gate artifact recording which checks ran and the cited clause/URL evidence.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §7 (Data, licensing & compliance — source matrix)",
+    "tasks/genome-browser-tracks-licensegate-002.json",
+    "SPDX license list; CC0, CC-BY 4.0, public-domain, and non-commercial license terms"
+  ],
+  "output": "review/catalog-014-shortlist.md — committed source shortlist with ≥6 APPROVED entries and one gate artifact per decision.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

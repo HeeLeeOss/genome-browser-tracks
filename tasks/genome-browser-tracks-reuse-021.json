@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-reuse-021",
+  "title": "Track and verify external adoption events",
+  "project": "genome-browser-tracks",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "genome-browser-tracks measures success by externally verifiable adoption events (third-party loads, registry acceptances, citations, forks, or lesson uses) — self-reported use does not count. M3 requires ≥3 such events recorded with externally verifiable evidence in the outcome ledger. This task tasks the Steward with actively searching for and recording adoption signals, and updating the outcome ledger with the evidence found.",
+  "objective": "Identify, verify, and record at least three external adoption events in the outcome ledger, each with externally verifiable evidence, and produce a summary report for the M3 milestone review.",
+  "acceptanceCriteria": [
+    "At least 3 verifiable external adoption events are recorded in outcomes/reuse-021.json: each with event type (hub-registry listing, third-party repo/notebook/paper reference, fork/issue/PR, course/lesson use), verifiable URL or citation, and date.",
+    "Self-reported use without external evidence is explicitly excluded — only externally verifiable signals count.",
+    "A summary report is committed summarising the adoption events and linking to the verifiable evidence.",
+    "The success-metrics table in the outcome ledger is updated against the project targets (baseline 0, target ≥3)."
+  ],
+  "resources": [
+    "PLAN.md §4 (Success metrics — attribution of outcomes and adoption events)",
+    "tasks/genome-browser-tracks-partner-013.json",
+    "tasks/genome-browser-tracks-registry-020.json"
+  ],
+  "output": "outcomes/reuse-021.json — committed adoption event ledger with ≥3 externally verifiable events and a summary report.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

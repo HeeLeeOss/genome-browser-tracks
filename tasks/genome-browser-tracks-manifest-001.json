@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-manifest-001",
+  "title": "Canonical track-pack manifest model + UCSC track-hub generator",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "bioinformatics", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "All three browser targets (UCSC, JBrowse 2, IGV) must be kept in sync from a single source of truth to avoid drift; hand-maintaining three parallel configs is error-prone and unsustainable. The solution is a canonical track-pack manifest model that encodes all pack metadata, with browser-specific configs emitted as projections. This task builds the manifest TypeScript model and the UCSC track-hub generator (hub.txt, genomes.txt, trackDb.txt), which is the M0 foundation for all subsequent pack tasks.",
+  "objective": "Implement the canonical track-pack manifest model and a UCSC track-hub generator that emits a valid, hubCheck-clean hub from a manifest fixture, with golden-fixture CI tests and the attribution + not-medical-advice string embedded in track descriptions.",
+  "acceptanceCriteria": [
+    "Manifest model documents every field from PLAN §6: id, title, description, intendedUse, notMedicalAdvice, assembly{id,source}, coordinateConvention, tracks[]{name,type,file,source{name,release,url,recordIdScheme},license{id,url,permitsRedistribution,nonCommercial,snapshotRef},dataTier,attribution,liftOver{from,to,chain,unmappedCount}}, provenanceCompleteness{score}, riskTier, reviewers{}, hosting{}.",
+    "Generator emits a valid UCSC track hub (hub.txt, genomes.txt, trackDb.txt) as a projection of the manifest; hubCheck passes on a golden fixture.",
+    "Track description embeds the source attribution and the not-medical-advice/intended-use string.",
+    "Golden manifest → expected hub fixtures are committed and diffed in CI using only synthetic fixtures (no bulk source data).",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §6 (Solution approach & architecture)",
+    "UCSC track-hub spec: hub.txt, genomes.txt, trackDb.txt",
+    "UCSC hubCheck and validateFiles documentation"
+  ],
+  "output": "packages/manifest/src/ — TypeScript manifest model and UCSC hub generator, with packages/manifest/test/ golden fixtures; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ds-civic-003",
+  "title": "CIViC curated cancer-variant evidence track pack (hg38+hg19)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "CIViC (Clinical Interpretation of Variants in Cancer) is a CC0-licensed, community-curated database of variant-disease-evidence associations. Its CC0 license makes it a clearly-redistributable Priority-A source. A CIViC-derived track pack — framed as research evidence, not clinical advice — is covered in the M1 pack task (pack-011); this source-catalog entry records the per-source gate triage and drives any additional CIViC pack variants beyond the M1 task.",
+  "objective": "Apply the licensegate-002 gate to CIViC, produce a committed PASS artifact, and deliver the CIViC variant evidence track pack on hg38+hg19 with all three browser targets if not already covered by pack-011.",
+  "acceptanceCriteria": [
+    "Source is CIViC (CC0); licensegate-002 PASS artifact committed with permitsRedistribution: true and nonCommercial: false with cited clause/URL.",
+    "Re-identification check run and PASS recorded (CIViC is an aggregate evidence database).",
+    "coordgate-003 PASS artifact committed for hg38; hg19 via liftOver with unmapped report.",
+    "All three browser targets emitted and render-verified; CIViC variant features appear at expected loci on hg38 with evidence in outcomes/ds-civic-003.json.",
+    "Per-feature provenance records CIViC evidence IDs, source release, and CC0 license; provenance completeness score ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "CIViC API and bulk download (CC0): https://civicdb.org/",
+    "PLAN.md §7 (CIViC source entry — Accept A)",
+    "tasks/genome-browser-tracks-catalog-014.json",
+    "tasks/genome-browser-tracks-pack-011.json"
+  ],
+  "output": "output/packs/civic-evidence-hg38/ and output/packs/civic-evidence-hg19/ — track files, browser configs, gate artifacts, manifest, and outcomes/ds-civic-003.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "genome-browser-tracks-domains-026",
+  "title": "Protein-domain track from Pfam/InterPro (CC0) for variant interpretation context",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Protein domain annotations from Pfam/InterPro (CC0) mapped to genomic coordinates provide a useful research overlay showing whether a variant falls in a known functional domain (e.g. kinase domain, DNA-binding domain). This is a research-context layer, not clinical guidance. This backlog task overlaps with ds-pfam-008 from the source catalog; it is a distinct deliverable focused specifically on the variant-interpretation use case, as a standalone pack for the multi-source driver pack (pack-017) complement.",
+  "objective": "Build a protein domain track from Pfam/InterPro (CC0) on hg38 mapped to gene coordinates, providing variant-interpretation context as a research overlay, with all three browser targets and per-feature provenance.",
+  "acceptanceCriteria": [
+    "Source is Pfam/InterPro (CC0); licensegate-002 PASS artifact committed with permitsRedistribution: true and nonCommercial: false.",
+    "Protein domain annotations are mapped to genomic coordinates on hg38; coordgate-003 PASS artifact committed.",
+    "All three browser targets emitted and render-verified; domain features appear at expected gene-coordinate loci on hg38 with evidence in outcomes/domains-026.json.",
+    "Per-feature provenance records Pfam/InterPro domain accessions, source release version, and CC0 license; provenance completeness score ≥ 90/100.",
+    "Pack carries not-medical-advice notice and is framed as a research-context overlay, not as individual variant interpretation; hosted at a loadable URL."
+  ],
+  "resources": [
+    "InterPro downloads (CC0): https://www.ebi.ac.uk/interpro/download/",
+    "Pfam downloads (CC0): https://pfam.xfam.org/",
+    "PLAN.md §7 (Pfam/InterPro source entry — Accept A)",
+    "tasks/ds-pfam-008.json"
+  ],
+  "output": "output/packs/pfam-domains-variant-context-hg38/ — BED/bigBed track files, browser configs, gate artifacts, manifest, and outcomes/domains-026.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

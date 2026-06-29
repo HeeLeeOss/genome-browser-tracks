@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-igv-008",
+  "title": "IGV session/registry projector",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["genomics", "bioinformatics", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M1 multi-browser parity requires all three browser targets to be emitted from the canonical manifest. IGV is widely used in cancer genomics labs alongside UCSC and JBrowse 2, so an IGV session/registry projector is required to complete the three-way parity. Like the JBrowse 2 adapter, it is a browser-specific isolated adapter that never duplicates the manifest source of truth.",
+  "objective": "Implement an IGV session/registry projector that emits a valid IGV session file from the canonical manifest, with golden-fixture CI tests and attribution + not-medical-advice carried through.",
+  "acceptanceCriteria": [
+    "Emits a valid IGV session file as a projection of the canonical manifest; output format conforms to the IGV session spec.",
+    "Attribution string and not-medical-advice/intended-use statement are present in the emitted session.",
+    "Golden manifest → expected IGV session fixtures are committed and diffed in CI using only synthetic fixtures.",
+    "Code is MIT-licensed; no credentials embedded; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off."
+  ],
+  "resources": [
+    "IGV session format documentation: https://software.broadinstitute.org/software/igv/Sessions",
+    "PLAN.md §6 (Solution approach — adapters)",
+    "tasks/genome-browser-tracks-manifest-001.json"
+  ],
+  "output": "packages/adapters/igv/src/ — IGV session projector; packages/adapters/igv/test/ golden fixtures; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

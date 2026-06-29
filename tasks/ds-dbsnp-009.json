@@ -1,0 +1,32 @@
+{
+  "id": "ds-dbsnp-009",
+  "title": "dbSNP variant identifier context track pack (hg38)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "dbSNP (NCBI) is the primary public archive of small genetic variants, identified by rsIDs, and is released as US-government public-domain data. A dbSNP rsID context track provides researchers with a reference layer to map published variant identifiers (e.g. rs17879961) to their genomic positions alongside cancer variant tracks like CIViC and ClinVar. Filtered to common/cancer-relevant variants or cancer gene regions, this track complements the cancer-gene packs without introducing re-identification risk from controlled data.",
+  "objective": "Apply the licensegate-002 gate to dbSNP (including re-identification check), produce a committed PASS artifact, and deliver a dbSNP cancer-gene-region variant identifier track on hg38.",
+  "acceptanceCriteria": [
+    "Source is dbSNP (NCBI, US-gov public domain); licensegate-002 PASS artifact committed with permitsRedistribution: true.",
+    "Re-identification check run and PASS recorded; track is filtered to aggregate-level variant identifiers in cancer gene regions, not individual-level genotypes.",
+    "coordgate-003 PASS artifact committed for hg38; VCF 1-based coordinate convention handled and recorded.",
+    "All three browser targets emitted and render-verified; dbSNP rsID features appear at expected loci on hg38 with evidence in outcomes/ds-dbsnp-009.json.",
+    "Per-feature provenance records rsIDs, dbSNP build version, and public-domain license; provenance completeness score ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "dbSNP FTP (NCBI, public domain): https://ftp.ncbi.nih.gov/snp/",
+    "PLAN.md §7 (dbSNP source entry — Accept A)",
+    "tasks/genome-browser-tracks-catalog-014.json"
+  ],
+  "output": "output/packs/dbsnp-cancer-genes-hg38/ — VCF/bigBed track files, browser configs, gate artifacts, manifest, and outcomes/ds-dbsnp-009.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

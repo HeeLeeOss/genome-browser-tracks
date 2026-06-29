@@ -1,0 +1,33 @@
+{
+  "id": "genome-browser-tracks-pack-017",
+  "title": "Multi-source driver pack: genes + curated variants + pathway membership",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Individual packs (driver genes, curated variants, pathway membership) each provide value, but combining them into one multi-source pack lets researchers and educators see the full picture in a single browser session: which cancer driver genes exist, what curated variants have been observed there, and which pathways they participate in. This requires combining CC0 (Open Targets, CIViC) and CC-BY (Reactome) sources, each with their own license attribution in the combined manifest, with no NC or controlled-access content present.",
+  "objective": "Build a multi-source cancer driver pack combining driver gene models (Open Targets/GENCODE), curated variants (CIViC CC0), and Reactome pathway membership (CC-BY) into a single manifest on hg38 and hg19, emitting all three browser targets.",
+  "acceptanceCriteria": [
+    "Combines at least three tracks from distinct approved sources (driver gene models, CIViC curated variants, Reactome pathway membership); each track in the manifest carries its own source license and attribution; no NC or controlled-access source present.",
+    "Each constituent source has a committed licensegate-002 PASS artifact; combined pack has a coordgate-003 PASS artifact for both hg38 and hg19.",
+    "All three browser targets emitted (UCSC + JBrowse 2 + IGV) and render-verified on hg38; features from all three tracks appear at expected loci with evidence in outcomes/pack-017.json.",
+    "Per-feature provenance is maintained per source (each feature traceable to its open source record); provenance completeness score ≥ 90/100.",
+    "Pack carries not-medical-advice notice; hosted at a loadable URL; adoption evidence or blocker recorded."
+  ],
+  "resources": [
+    "tasks/genome-browser-tracks-pack-011.json (CIViC)",
+    "tasks/genome-browser-tracks-pack-016.json (Reactome)",
+    "tasks/genome-browser-tracks-pilot-006.json (driver genes)",
+    "PLAN.md §6 (Canonical track-pack manifest)"
+  ],
+  "output": "output/packs/multi-source-driver-hg38/ and output/packs/multi-source-driver-hg19/ — combined track files, browser configs, gate artifacts, manifest, and outcomes/pack-017.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

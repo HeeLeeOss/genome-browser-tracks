@@ -1,0 +1,34 @@
+{
+  "id": "genome-browser-tracks-registry-020",
+  "title": "Submit a pack to a public hub/config registry",
+  "project": "genome-browser-tracks",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Listing a pack in a public hub/config registry (UCSC public hub registry or JBrowse config registry) dramatically increases discoverability and enables self-serve adoption by researchers and educators who browse these registries. PLAN.md explicitly states that auto-publishing is a non-goal — a human submits after review. M3 requires at least one pack listed in a public registry as a verifiable adoption signal.",
+  "objective": "Submit at least one delivered, render-verified pack to the UCSC public hub registry or JBrowse config registry, and document the submission process for future submissions.",
+  "acceptanceCriteria": [
+    "At least one delivered pack (render-verified, provenance complete, not-medical-advice present) is submitted to the UCSC public hub registry or JBrowse config registry by a human submitter (no automated upload).",
+    "The submission is accepted (or the rejection reason is recorded with a remediation plan).",
+    "The registry listing URL is recorded in the Steward's outcomes/<pack-id>.json as an externally verifiable adoption event.",
+    "A process document is committed describing the submission steps for future packs.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "UCSC public track hub registry: https://genome.ucsc.edu/cgi-bin/hgHubConnect",
+    "JBrowse configuration registry",
+    "PLAN.md §5 (In-scope — self-serve hosting and registry submission)",
+    "tasks/genome-browser-tracks-pack-011.json",
+    "tasks/genome-browser-tracks-pack-016.json"
+  ],
+  "output": "review/registry-020-submission.md — committed submission record and process document; outcomes/<pack-id>.json updated with registry listing URL.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
