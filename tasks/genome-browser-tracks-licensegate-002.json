@@ -1,0 +1,34 @@
+{
+  "id": "genome-browser-tracks-licensegate-002",
+  "title": "License + data-tier gate checklist (open/aggregate/de-identified only; NC/controlled excluded)",
+  "project": "genome-browser-tracks",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "open-science", "licensing"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "genome-browser-tracks builds cancer feature tracks for genome browsers from open annotations. The binding cancer guardrail allows ONLY open-access / aggregate / de-identified data: controlled-access sources (dbGaP, EGA, individual-level biobanks) and non-commercial sources (COSMIC, Cancer Gene Census, OncoKB) are out of scope because we cannot redistribute derivative tracks under an open license. Before any track is built, each source must pass a blocking license + data-tier gate. This task produces that gate as a committed, reviewable checklist artifact.",
+  "objective": "Create the blocking license + data-tier gate checklist that every source must pass before a track pack is built, encoding the cancer guardrails and producing a committed PASS/FLAG/EXCLUDE artifact per source.",
+  "acceptanceCriteria": [
+    "PASS only if data tier is one of {open, aggregate, de-identified} AND the license permits redistribution of derivative works (permitsRedistribution: true, nonCommercial: false) evidenced by a cited clause/URL; missing or unparseable evidence = FLAG/EXCLUDE (no default-allow).",
+    "Explicitly excludes COSMIC, Cancer Gene Census, and OncoKB (non-commercial) and all controlled-access / individual-level sources (dbGaP, EGA, biobanks).",
+    "Records license id + URL + snapshot reference (committed copy + SHA-256 hash + Wayback save URL) and any required attribution (e.g. CC-BY sources such as Reactome).",
+    "Includes a re-identification check for small-cohort variant tracks; any re-identification signal forces EXCLUDE.",
+    "Produces a committed, reviewable PASS/FLAG/EXCLUDE artifact per source recording which checks ran and what fired, signed off by the License+provenance reviewer.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\genome-browser-tracks\\PLAN.md",
+    "C:\\code\\elyos\\planning\\ROADMAP.md",
+    "C:\\code\\elyos\\docs\\good-deed-definition.md",
+    "SPDX license list; CC0 / CC-BY 4.0 / public-domain terms"
+  ],
+  "output": "A committed license + data-tier gate checklist plus the per-source PASS/FLAG/EXCLUDE artifact template, ready for use by every per-source pack task.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
