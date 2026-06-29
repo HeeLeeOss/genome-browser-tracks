@@ -1,0 +1,32 @@
+{
+  "id": "ds-hotspots-012",
+  "title": "Cancer recurrent hotspots track pack (per-source gate required)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Recurrent cancer mutation hotspot resources (e.g. MSKCC cancer hotspots at cancerhotspots.org) identify positions mutated in statistically significant fractions of tumours. These are Priority-B sources whose redistribution terms must be verified before any track is built. This source-catalog task is related to the M2 pack-015 task; the catalog-014 triage determines which hotspot source is APPROVED before either pack task proceeds. If terms cannot be confirmed as permitting redistribution, the source stays EXCLUDE.",
+  "objective": "Verify redistribution rights for a specific cancer hotspot source through catalog-014, run the licensegate-002 gate, and if APPROVED, deliver the hotspot track pack on hg38+hg19 (see also pack-015).",
+  "acceptanceCriteria": [
+    "A specific hotspot source is confirmed APPROVED in catalog-014 with cited redistribution terms and permitsRedistribution: true (or marked EXCLUDED if terms cannot be confirmed).",
+    "licensegate-002 and coordgate-003 PASS artifacts committed; re-identification check PASS recorded (hotspots are aggregate position statistics).",
+    "If gate FAILS, task is EXCLUDED with the reason documented and no track is built.",
+    "If gate PASSES: all three browser targets emitted and render-verified; per-feature provenance records source record IDs, release version, and license; provenance completeness ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "MSKCC cancer hotspots (verify terms): https://www.cancerhotspots.org/",
+    "PLAN.md §7 (Cancer hotspots — Verify B → gate)",
+    "tasks/genome-browser-tracks-catalog-014.json",
+    "tasks/genome-browser-tracks-pack-015.json"
+  ],
+  "output": "output/packs/cancer-hotspots-hg38/ — track files, browser configs, gate artifacts, manifest, and outcomes/ds-hotspots-012.json (or EXCLUDED record if gate fails).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

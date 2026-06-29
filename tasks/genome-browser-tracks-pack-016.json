@@ -1,0 +1,33 @@
+{
+  "id": "genome-browser-tracks-pack-016",
+  "title": "Reactome (CC-BY) cancer-pathway membership track",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Reactome is a CC-BY 4.0-licensed, peer-reviewed pathway database mapping genes to biological processes, including cancer-relevant signalling and metabolic pathways. Mapping Reactome pathway membership to gene coordinates on the genome provides researchers and educators with a contextual overlay — e.g. which driver genes sit in the same pathway — that is not available from variant tracks alone. This is a Priority-A source with clear redistribution terms; attribution of the CC-BY license in the manifest and track metadata is required.",
+  "objective": "Build the Reactome cancer-pathway membership track pack on hg38, emitting all three browser targets, with CC-BY 4.0 attribution captured in the manifest and embedded in track metadata, and per-feature provenance to Reactome pathway IDs.",
+  "acceptanceCriteria": [
+    "Source is Reactome (CC-BY 4.0); licensegate-002 PASS artifact committed with permitsRedistribution: true and attribution captured; CC-BY attribution string is embedded in the track description and manifest.",
+    "Pathway-membership features are mapped to gene coordinates on hg38; coordgate-003 PASS artifact committed.",
+    "All three browser targets emitted (UCSC + JBrowse 2 + IGV) and render-verified; cancer-pathway gene features appear at expected loci on hg38 with evidence in outcomes/pack-016.json.",
+    "Per-feature provenance records Reactome pathway IDs, source release version, and CC-BY license; provenance completeness score ≥ 90/100.",
+    "Pack carries not-medical-advice notice; hosted at a loadable URL; adoption evidence or blocker recorded."
+  ],
+  "resources": [
+    "Reactome downloads (CC-BY 4.0): https://reactome.org/download-data",
+    "PLAN.md §7 (Reactome source entry — Accept A)",
+    "tasks/genome-browser-tracks-catalog-014.json",
+    "tasks/genome-browser-tracks-jbrowse-007.json"
+  ],
+  "output": "output/packs/reactome-pathways-hg38/ — track files, browser configs, gate artifacts, manifest, and outcomes/pack-016.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "ds-gdcopen-010",
+  "title": "GDC/TCGA open-access somatic mutation aggregate track pack (hg38)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The NCI GDC open-access tier provides aggregate somatic mutation files (MAF format) from TCGA studies without controlled-access genotype data. This is a Priority-B source: redistribution terms must be verified per-study/file before any track is built. The re-identification check is particularly critical here — even open-access TCGA MAF files may contain variant patterns from small cohorts that could be re-identifying; any such signal forces EXCLUDE per the cancer guardrail. This task is blocked on catalog-014 confirming at least one GDC study as APPROVED.",
+  "objective": "Verify redistribution rights for a specific GDC/TCGA open-access somatic MAF study through catalog-014, run the licensegate-002 gate including re-identification check, and if APPROVED, build an aggregate somatic mutation track pack on hg38.",
+  "acceptanceCriteria": [
+    "At least one specific GDC/TCGA study is confirmed APPROVED in catalog-014 with cited redistribution terms and permitsRedistribution: true.",
+    "Re-identification check run and PASS recorded; track is derived from an open-tier aggregate MAF with no small-cohort re-identification signal.",
+    "licensegate-002 and coordgate-003 PASS artifacts committed for the selected study.",
+    "If gate FAILS or re-identification signal is found, task is marked EXCLUDED with the reason documented and no track is built.",
+    "If gate PASSES: all three browser targets emitted and render-verified; per-feature provenance records GDC case/file UUIDs, study ID, and open-access terms; provenance completeness ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "NCI GDC data portal (open-access tier): https://portal.gdc.cancer.gov/",
+    "PLAN.md §7 (GDC/TCGA open somatic — Verify B → gate per file)",
+    "tasks/genome-browser-tracks-catalog-014.json"
+  ],
+  "output": "output/packs/gdc-somatic-hg38/ — aggregate somatic track file(s), browser configs, gate artifacts, manifest, and outcomes/ds-gdcopen-010.json (or EXCLUDED record if gate fails).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

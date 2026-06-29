@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-jbrowse-007",
+  "title": "JBrowse 2 config.json projector",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["genomics", "bioinformatics", "open-science"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M1 requires packs to emit all three browser targets (UCSC, JBrowse 2, IGV) from one canonical manifest so configs never drift. The manifest-first architecture means JBrowse 2 config.json is a projection of the manifest — a separate browser-specific adapter — not a hand-maintained parallel file. This task implements that projector, following the same adapter-isolation pattern as the M0 UCSC hub generator.",
+  "objective": "Implement a JBrowse 2 config.json projector that emits a valid, spec-compliant JBrowse 2 config from the canonical manifest, with golden-fixture CI tests and attribution + not-medical-advice carried through.",
+  "acceptanceCriteria": [
+    "Emits a valid JBrowse 2 config.json as a projection of the canonical manifest; output is validated against the JBrowse 2 config.json schema.",
+    "Attribution string and not-medical-advice/intended-use statement are present in the emitted config.",
+    "Golden manifest → expected config.json fixtures are committed and diffed in CI using only synthetic fixtures.",
+    "Code is MIT-licensed; no credentials embedded; pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off."
+  ],
+  "resources": [
+    "JBrowse 2 configuration documentation: https://jbrowse.org/jb2/docs/",
+    "PLAN.md §6 (Solution approach — adapters)",
+    "tasks/genome-browser-tracks-manifest-001.json"
+  ],
+  "output": "packages/adapters/jbrowse/src/ — JBrowse 2 config.json projector; packages/adapters/jbrowse/test/ golden fixtures; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

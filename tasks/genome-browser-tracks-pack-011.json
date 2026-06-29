@@ -1,0 +1,34 @@
+{
+  "id": "genome-browser-tracks-pack-011",
+  "title": "Curated cancer-gene variant pack from CIViC (CC0), hg38+hg19",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "CIViC (Clinical Interpretation of Variants in Cancer) is a CC0-licensed community-curated database of cancer variant evidence, making it one of the clearest Priority-A sources for redistribution. Framed as research evidence (not clinical advice), a CIViC variant track overlaid on cancer gene models is high-value for researchers and educators who want to see where curated evidence variants sit along the genome. This pack demonstrates M1 multi-browser parity (all three targets) and the hg19 liftOver path on a real Priority-A source.",
+  "objective": "Build the CIViC curated variant pack on hg38 (primary) and hg19 (via liftOver), emitting all three browser targets (UCSC + JBrowse 2 + IGV), with per-feature provenance to CIViC record IDs and provenance completeness ≥ 90/100.",
+  "acceptanceCriteria": [
+    "Source is CIViC (CC0); licensegate-002 PASS artifact committed with permitsRedistribution: true; pack is framed as research evidence and carries an explicit not-medical-advice notice — never as clinical advice.",
+    "Built on hg38 and lifted to hg19 with recorded chain provenance and committed unmapped report.",
+    "All three browser targets emitted (UCSC hub + JBrowse 2 config.json + IGV session) and render-verified in at least one target browser; features appear at expected loci on hg38 with evidence in outcomes/pack-011.json.",
+    "Per-feature provenance records CIViC variant IDs, source release version, and license; provenance completeness score ≥ 90/100.",
+    "Pack hosted at a loadable URL; adoption evidence recorded or adoption blocker surfaced in outcomes/pack-011.json."
+  ],
+  "resources": [
+    "CIViC API and bulk download (CC0): https://civicdb.org/",
+    "PLAN.md §7 (CIViC source entry — Accept A)",
+    "tasks/genome-browser-tracks-jbrowse-007.json",
+    "tasks/genome-browser-tracks-igv-008.json",
+    "tasks/genome-browser-tracks-liftover-010.json"
+  ],
+  "output": "output/packs/civic-variants-hg38/ and output/packs/civic-variants-hg19/ — track files, browser configs, gate artifacts, manifest, and outcomes/pack-011.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

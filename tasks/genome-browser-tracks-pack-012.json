@@ -1,0 +1,33 @@
+{
+  "id": "genome-browser-tracks-pack-012",
+  "title": "ClinVar (public-domain) variants-in-cancer-genes pack",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "ClinVar is a US-government public-domain resource aggregating variant-condition associations; it is one of the highest-value Priority-A sources for cancer-relevant variant information. Filtered to variants in known cancer genes and framed as aggregate research evidence (not individual clinical interpretation), a ClinVar track adds significant value alongside the CIViC pack. The aggregate/de-identified nature of ClinVar data means the re-identification check in the license gate is expected to PASS, but must still be explicitly run and recorded.",
+  "objective": "Build the ClinVar variants-in-cancer-genes pack filtered to cancer-relevant genes on hg38, emitting all three browser targets, with the licensegate-002 re-identification check explicitly run and committed, and per-feature provenance to ClinVar variation IDs.",
+  "acceptanceCriteria": [
+    "Source is ClinVar (US-gov public domain); licensegate-002 PASS artifact committed including the re-identification check (aggregate source confirmed); pack carries not-medical-advice notice and is framed as aggregate evidence, not individual clinical interpretation.",
+    "coordgate-003 PASS artifact committed for hg38; coordinate convention (1-based VCF) handled and recorded.",
+    "All three browser targets emitted (UCSC + JBrowse 2 + IGV) and render-verified; features appear at expected loci on hg38 with evidence in outcomes/pack-012.json.",
+    "Per-feature provenance records ClinVar variation IDs, source release version, and public-domain license; provenance completeness score ≥ 90/100.",
+    "Pack hosted at a loadable URL; adoption evidence or adoption blocker recorded in outcomes/pack-012.json."
+  ],
+  "resources": [
+    "ClinVar FTP and API (NCBI, public domain): https://www.ncbi.nlm.nih.gov/clinvar/",
+    "PLAN.md §7 (ClinVar source entry — Accept A)",
+    "tasks/genome-browser-tracks-jbrowse-007.json",
+    "tasks/genome-browser-tracks-igv-008.json"
+  ],
+  "output": "output/packs/clinvar-cancer-genes-hg38/ — VCF/bigBed track file(s), browser configs, gate artifacts, manifest, and outcomes/pack-012.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

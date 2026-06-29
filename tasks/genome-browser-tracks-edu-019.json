@@ -1,0 +1,34 @@
+{
+  "id": "genome-browser-tracks-edu-019",
+  "title": "Education-only 'where are the cancer genes?' pack + tutorial",
+  "project": "genome-browser-tracks",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "education", "open-science"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Research-literate patient advocates and students want to understand where in the genome cancer features sit, but most educational resources either assume deep bioinformatics literacy or oversimplify to the point of being misleading. This task produces an education-only tutorial and accompanying browser pack that helps non-specialist audiences explore cancer gene locations — strictly framed as education, never as clinical advice. Because any patient-facing content carries clinical-framing risk, this task is riskTier: high and requires oncologist + patient-advocate sign-off before publish.",
+  "objective": "Write an education-only tutorial explaining how to load and interpret the cancer gene browser pack, with an explicit not-medical-advice notice throughout, built only from APPROVED open sources, and carrying oncologist + patient-advocate sign-off before publication.",
+  "acceptanceCriteria": [
+    "Education-only framing throughout; a prominent not-medical-advice notice appears at the start of the tutorial and in the pack description; no per-individual actionability, diagnosis, prognosis, or treatment guidance.",
+    "Oncologist sign-off AND patient-advocate sign-off are both recorded in a committed review artifact before the tutorial is published.",
+    "Every assertion in the tutorial traces to an open source record; the Bioinformatics reviewer confirms accuracy and correct loci on the declared assembly.",
+    "Built exclusively from APPROVED open sources confirmed in catalog-014; no NC or controlled-access content is present.",
+    "Tutorial output is licensed CC-BY-4.0 with clear attribution; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §2 (Beneficiaries — research-literate patient advocates)",
+    "PLAN.md §7 (No medical advice — binding constraint)",
+    "PLAN.md M3 (Education-only patient layer)",
+    "tasks/genome-browser-tracks-pack-017.json",
+    "tasks/genome-browser-tracks-partner-013.json"
+  ],
+  "output": "docs/edu-tutorial-cancer-genes.md — education-only tutorial with not-medical-advice notice and review sign-off artifact committed alongside it.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

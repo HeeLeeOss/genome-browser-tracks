@@ -1,0 +1,32 @@
+{
+  "id": "ds-gencode-001",
+  "title": "GENCODE gene/transcript model track pack (hg38+hg19)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "GENCODE provides comprehensive gene and transcript models on hg38 (and hg19/GRCh37) under an open license with no redistribution restrictions — it is the standard reference for human gene models in cancer genomics. A GENCODE-derived track pack serves as the gene-model layer in multi-source packs (e.g. the pilot driver-gene pack), and as a standalone educational resource for understanding gene structure. The license gate must be run even for clearly-accepted sources to produce the committed gate artifact.",
+  "objective": "Build a GENCODE gene/transcript model track pack on hg38 (primary) and hg19 (secondary), passing the licensegate-002 and coordgate-003 gates, and emitting all three browser targets with per-feature provenance.",
+  "acceptanceCriteria": [
+    "Source is GENCODE; licensegate-002 PASS artifact committed with permitsRedistribution: true and cited clause/URL.",
+    "coordgate-003 PASS artifact committed for hg38 and hg19; coordinate convention handled and recorded.",
+    "All three browser targets emitted and render-verified; gene/transcript features appear at expected loci on hg38 with evidence in outcomes/ds-gencode-001.json.",
+    "Per-feature provenance records GENCODE gene IDs, source release version, and license; provenance completeness score ≥ 90/100.",
+    "Pack carries not-medical-advice notice; hosted at a loadable URL; adoption evidence or blocker recorded."
+  ],
+  "resources": [
+    "GENCODE downloads: https://www.gencodegenes.org/human/",
+    "PLAN.md §7 (GENCODE source entry — Accept A)",
+    "tasks/genome-browser-tracks-catalog-014.json"
+  ],
+  "output": "output/packs/gencode-genes-hg38/ and output/packs/gencode-genes-hg19/ — GFF3/bigBed track files, browser configs, gate artifacts, manifest, and outcomes/ds-gencode-001.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

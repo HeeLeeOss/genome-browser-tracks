@@ -1,0 +1,33 @@
+{
+  "id": "ds-clinvar-004",
+  "title": "ClinVar variant-condition aggregate track pack (hg38)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "ClinVar is a US-government public-domain resource aggregating variant-condition associations from clinical laboratories and research submitters. It is covered in the M1 pack task (pack-012); this source-catalog entry records the per-source gate triage. The re-identification check is particularly important here because ClinVar aggregates submissions that could, in edge cases, reference rare variants — the aggregate-data-tier check must confirm that the track is built from aggregate VCF data, not small-cohort extracts.",
+  "objective": "Apply the licensegate-002 gate (including re-identification check) to ClinVar, produce a committed PASS artifact, and deliver the ClinVar cancer-relevant variants pack on hg38 if not already covered by pack-012.",
+  "acceptanceCriteria": [
+    "Source is ClinVar (NCBI, US-gov public domain); licensegate-002 PASS artifact committed with permitsRedistribution: true.",
+    "Re-identification check explicitly run and PASS recorded; aggregate VCF source confirmed (not a small-cohort extract).",
+    "coordgate-003 PASS artifact committed for hg38; coordinate convention (VCF 1-based) handled and recorded.",
+    "All three browser targets emitted and render-verified; ClinVar features appear at expected cancer-gene loci on hg38 with evidence in outcomes/ds-clinvar-004.json.",
+    "Per-feature provenance records ClinVar variation IDs, source release, and public-domain license; provenance completeness ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "ClinVar FTP (NCBI, public domain): https://ftp.ncbi.nlm.nih.gov/pub/clinvar/",
+    "PLAN.md §7 (ClinVar source entry — Accept A)",
+    "tasks/genome-browser-tracks-catalog-014.json",
+    "tasks/genome-browser-tracks-pack-012.json"
+  ],
+  "output": "output/packs/clinvar-cancer-hg38/ — track files, browser configs, gate artifacts, manifest, and outcomes/ds-clinvar-004.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

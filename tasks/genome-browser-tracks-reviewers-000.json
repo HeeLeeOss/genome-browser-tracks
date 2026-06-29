@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-reviewers-000",
+  "title": "Name/secure License+provenance and Bioinformatics reviewers (blocking gate roles)",
+  "project": "genome-browser-tracks",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "open-science", "licensing"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "genome-browser-tracks requires two mandatory reviewer roles before any pack can be reviewed: a License+provenance reviewer (who can read open-data/bioinformatics licenses and apply the data-tier rule) and a Bioinformatics reviewer (who verifies assembly/coordinate correctness, format validity, and render checks). Both are blocking prerequisites — no source can pass the gate and no pilot pack can be reviewed until both roles are named. This task secures those commitments before M0 work begins.",
+  "objective": "Identify and confirm at least one qualified person for each mandatory reviewer role (License+provenance and Bioinformatics), document their commitment and qualifications, and record the named roles in a committed artifact.",
+  "acceptanceCriteria": [
+    "At least one named, qualified License+provenance reviewer is confirmed and documented (can read CC0/CC-BY/public-domain/NC licenses and apply the cancer data-tier rule).",
+    "At least one named, qualified Bioinformatics reviewer is confirmed and documented (genomics-literate; can verify assembly, coordinate convention, format validity, and render checks).",
+    "Each role has ≥2 qualified reviewers identified to meet the bus-factor requirement stated in PLAN.md.",
+    "A committed document records names, qualifications, and confirmation dates for each role.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §11 (Governance, roles & stakeholders)",
+    "PLAN.md §8 (Quality, review & risk gates)"
+  ],
+  "output": "review/reviewer-roles.md — committed document naming both mandatory reviewer roles with qualifications and confirmation dates, unblocking the M0 pilot gate review.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

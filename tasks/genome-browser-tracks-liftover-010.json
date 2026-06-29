@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-liftover-010",
+  "title": "hg19 liftOver path + unmapped report",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["genomics", "bioinformatics", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "hg19 (GRCh37) remains the declared assembly for many published cancer datasets and is still common in clinical-research contexts. Several M1+ packs (e.g. CIViC pack-011) must be delivered on both hg38 and hg19. liftOver coordinate conversion introduces its own provenance and correctness requirements: the chain file must be identified and pinned, unmapped features must be counted and reported (not silently dropped), and the liftOver step must be recorded in the manifest. This task implements the hg19 liftOver path as a reusable component.",
+  "objective": "Implement the hg19 liftOver path using the UCSC liftOver CLI, recording chain file provenance (source, version, URL), producing a mapped/unmapped count report per run, and wiring the result into the manifest's liftOver{} field.",
+  "acceptanceCriteria": [
+    "Wraps the UCSC liftOver CLI to convert track coordinates from hg38 to hg19 using a pinned, recorded chain file (source, version, URL committed).",
+    "Produces a per-run mapped/unmapped count report committed as part of the pack output (unmapped features are never silently dropped).",
+    "The manifest liftOver{from, to, chain, unmappedCount} field is populated for every pack that uses this path.",
+    "At least one test fixture covers a deliberate liftOver edge case (partially unmapped region) and verifies the unmapped report is produced.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials embedded; commit is DCO signed-off."
+  ],
+  "resources": [
+    "UCSC liftOver tool and chain files: https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/",
+    "PLAN.md §6 (Pipeline step 3 — liftOver provenance + unmapped report)",
+    "tasks/genome-browser-tracks-coordgate-003.json"
+  ],
+  "output": "packages/liftover/src/ — hg19 liftOver wrapper with chain provenance recording and unmapped report; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "genome-browser-tracks-coordgate-003",
+  "title": "Coordinate + assembly gate checklist (assembly recorded, 0/1-based, liftOver provenance)",
+  "project": "genome-browser-tracks",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["genomics", "bioinformatics", "open-science"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Coordinate off-by-one errors and wrong-assembly tracks are the classic silent failures of genomics — a track can appear to load while pointing to completely wrong loci. genome-browser-tracks treats coordinate/assembly correctness as a non-skippable, auditable blocking gate applied to every pack. This task produces the gate checklist as a committed artifact, separate from the license gate because coordinate errors and licensing violations are distinct failure classes requiring different expertise.",
+  "objective": "Create the coordinate + assembly gate checklist that every pack must pass, encoding the required assembly recording, coordinate-convention normalisation, format validation, and liftOver provenance requirements, and producing a committed PASS/FAIL artifact per pack.",
+  "acceptanceCriteria": [
+    "Requires the assembly to be recorded (hg38 primary / hg19 secondary) and the source coordinate convention (0-based half-open vs 1-based) captured and correctly normalised.",
+    "Requires validateFiles/format validation to pass and an assembly-mismatch sanity check (e.g. chromosomes on hg38 vs hg19).",
+    "When liftOver is used, requires recorded chain provenance (chain file source + version + URL) and a mapped/unmapped count report committed as part of the pack.",
+    "Produces a committed PASS/FAIL artifact per pack recording which checks ran and the outcomes, signed off by the Bioinformatics reviewer.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §6 (Solution approach — pipeline step 3 and step 6)",
+    "PLAN.md §8 (Quality, review & risk gates)",
+    "UCSC validateFiles and hubCheck documentation",
+    "UCSC liftOver chain file provenance"
+  ],
+  "output": "review/coordgate-003-checklist.md — committed coordinate + assembly gate checklist and per-pack PASS/FAIL artifact template, ready for use by every pack task.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

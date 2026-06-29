@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-effort-018",
+  "title": "Per-pack build-effort instrumentation + outcome ledger",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["open-science", "genomics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M2 success requires demonstrating a measurable reduction in median per-pack build effort (AI-session minutes + human review cycles) relative to the M0/M1 baseline — an effort-reduction metric that guards against scale being asserted rather than measured. Without instrumentation to capture effort data per pack, the M2 metric cannot be verified. This task adds a simple outcome ledger that records build time and review cycles per pack, readable by the steward and referenced in milestone DoDs.",
+  "objective": "Implement a per-pack build-effort ledger that records AI-session minutes and human-review cycle counts per pack, and emit a summary report so the M2 median-effort metric is measurable against the M0/M1 baseline.",
+  "acceptanceCriteria": [
+    "A ledger schema and update script are implemented so each delivered pack records: pack-id, build session minutes, number of human-review cycles, and delivery date.",
+    "A summary report command emits median build-session minutes and median review cycles across all recorded packs, segmented by milestone (M0/M1/M2).",
+    "At least one test fixture exercises the ledger update and summary report with synthetic data.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials embedded; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §4 (Success metrics — effort-reduction metric)",
+    "PLAN.md M2 exit criteria",
+    "tasks/genome-browser-tracks-manifest-001.json"
+  ],
+  "output": "packages/ledger/src/ — build-effort ledger and summary report tool; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-i18n-025",
+  "title": "Translate an education-only pack's docs (reviewed)",
+  "project": "genome-browser-tracks",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "education", "open-science"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Translating the education-only cancer gene tutorial (edu-019) into additional languages widens its reach to non-English-speaking patient advocates and students. Because the source content is patient-facing and riskTier: high, any translation must carry the same not-medical-advice framing and requires oncologist + patient-advocate review in the target language before publication. No specific language has been chosen yet — this task is contingent on identifying a review-qualified translator and reviewers for the target language.",
+  "objective": "Translate the education-only cancer gene tutorial into one target language, with oncologist + patient-advocate sign-off in that language before publication, and not-medical-advice notice present in the translated text.",
+  "acceptanceCriteria": [
+    "A specific target language is identified with a qualified translator and target-language oncologist + patient-advocate reviewers confirmed before translation begins.",
+    "Translated tutorial carries the same education-only framing and a prominent not-medical-advice notice as the source document.",
+    "Oncologist sign-off AND patient-advocate sign-off in the target language are both recorded in a committed review artifact before the translation is published.",
+    "Translation does not introduce new medical claims or reframe research findings as clinical guidance.",
+    "Document output licensed CC-BY-4.0; commit is DCO signed-off."
+  ],
+  "resources": [
+    "tasks/genome-browser-tracks-edu-019.json (source document)",
+    "PLAN.md §7 (No medical advice — binding constraint)",
+    "PLAN.md M3 (Education-only patient layer)"
+  ],
+  "output": "docs/edu-tutorial-cancer-genes.<lang>.md — translated education-only tutorial with not-medical-advice notice and target-language review sign-off artifact.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

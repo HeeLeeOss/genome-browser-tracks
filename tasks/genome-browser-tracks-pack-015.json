@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-pack-015",
+  "title": "Recurrent cancer hotspots pack (gated source, hg38+hg19)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Recurrent cancer mutation hotspots (e.g. positions in KRAS, TP53, PIK3CA that are mutated in many tumours) are among the most-asked-about features in cancer-genomics education and research. Several hotspot resources exist (e.g. MSKCC cancer hotspots), but their redistribution terms require per-source verification (Priority-B). This pack is blocked on catalog-014 confirming a hotspot source as APPROVED before any track is built.",
+  "objective": "Build a recurrent cancer hotspots track pack on hg38 (primary) and hg19 (via liftOver) from a catalog-014-approved hotspot source, emitting all three browser targets with per-feature provenance and both gate artifacts committed.",
+  "acceptanceCriteria": [
+    "Source is a hotspot dataset confirmed APPROVED in catalog-014 (permitsRedistribution: true with cited clause/URL); licensegate-002 PASS artifact committed.",
+    "coordgate-003 PASS artifact committed for hg38; hg19 liftOver with chain provenance and unmapped report committed.",
+    "All three browser targets emitted (UCSC + JBrowse 2 + IGV) and render-verified; features appear at expected hotspot loci on hg38 with evidence in outcomes/pack-015.json.",
+    "Per-feature provenance records source record IDs, source release, and license; provenance completeness score ≥ 90/100.",
+    "Pack carries not-medical-advice notice; hosted at a loadable URL; adoption evidence or blocker recorded."
+  ],
+  "resources": [
+    "PLAN.md §7 (Cancer hotspots — Priority B, verify terms)",
+    "tasks/genome-browser-tracks-catalog-014.json",
+    "tasks/genome-browser-tracks-liftover-010.json"
+  ],
+  "output": "output/packs/cancer-hotspots-hg38/ and output/packs/cancer-hotspots-hg19/ — track files, browser configs, gate artifacts, manifest, and outcomes/pack-015.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

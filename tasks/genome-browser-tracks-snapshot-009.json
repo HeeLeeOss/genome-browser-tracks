@@ -1,0 +1,31 @@
+{
+  "id": "genome-browser-tracks-snapshot-009",
+  "title": "License-text snapshot capture in provenance flow",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["open-science", "licensing", "genomics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The license+data-tier gate requires provenance to include a committed copy of the source license text, a SHA-256 hash of that copy, and a Wayback Machine save URL — not just a bare URL that can disappear or change. This standard is reused from the sibling open-data-datasheets project. The M1 gate hardening task wires this snapshot step into the provenance flow so every pack's license.snapshotRef is automatically populated and verifiable.",
+  "objective": "Implement a license-text snapshot utility that fetches and commits a local copy of a license text/page, computes its SHA-256, and saves a Wayback Machine URL, populating the license.snapshotRef field in the manifest provenance.",
+  "acceptanceCriteria": [
+    "Implements committed local copy of the license text/page + SHA-256 + Wayback save URL; license.snapshotRef records committed path + hash + Wayback timestamp.",
+    "A bare URL alone is insufficient — the utility must produce and commit the snapshot artifact.",
+    "Wired into the licensegate-002 provenance flow so it runs as part of the per-source gate step.",
+    "Code is MIT-licensed; tests + CI green; no credentials embedded; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §7 (Provenance model — license-text snapshot standard)",
+    "tasks/genome-browser-tracks-licensegate-002.json",
+    "Wayback Machine Save Page API: https://archive.org/help/wayback_api.php"
+  ],
+  "output": "packages/provenance/src/snapshot.ts — license-text snapshot utility wired into the provenance flow; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "genome-browser-tracks-partner-013",
+  "title": "Secure first confirmed adopter",
+  "project": "genome-browser-tracks",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "open-science", "education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "genome-browser-tracks defines success as delivered, not merged: a pack is shipped only when it is actually used by a beneficiary with externally verifiable evidence. Until a named adopter confirms they will use/adopt a specific pack, all tasks carry verifiedNeed: false. M1 requires at least one external adoption event recorded, which means following up on M0 outreach and converting at least one candidate into a confirmed adopter with a documented mechanism (hub URL in a repo, lesson plan, or registry listing).",
+  "objective": "Convert at least one outreach candidate into a named confirmed adopter who commits to using a specific pack, document the adoption mechanism, and update affected task files to verifiedNeed: true with requestor set.",
+  "acceptanceCriteria": [
+    "A named lab, educator, browser project, or advocacy org confirms they will use or adopt at least one pack.",
+    "The adoption mechanism is documented (hub URL referenced in their repo/notebook/paper, acceptance into a hub registry, integration into a course lesson, or fork/issue/PR referencing the pack).",
+    "The adoption is externally verifiable — self-reported use alone does not count.",
+    "The outcome is recorded in a committed document and the Steward's outcomes/<pack-id>.json is updated with the adoption evidence.",
+    "Affected task files are updated with verifiedNeed: true and requestor set to the adopter."
+  ],
+  "resources": [
+    "PLAN.md §4 (Success metrics — attribution of outcomes)",
+    "PLAN.md §2 (Problem & beneficiaries — partner channels)",
+    "tasks/genome-browser-tracks-outreach-005.json"
+  ],
+  "output": "review/partner-013-adoption.md — committed document naming the confirmed adopter, adoption mechanism, and verifiable evidence; outcomes/ JSON updated.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

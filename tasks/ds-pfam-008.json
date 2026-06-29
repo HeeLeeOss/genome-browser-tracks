@@ -1,0 +1,33 @@
+{
+  "id": "ds-pfam-008",
+  "title": "Pfam/InterPro protein domain track pack (hg38)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Pfam and InterPro provide protein domain annotations under CC0, enabling researchers to see which parts of a gene encode known protein domains. In cancer genomics, this is useful for understanding whether a variant falls in a functionally important domain (e.g. a kinase domain or DNA-binding domain) — providing research context without making clinical claims. This source-catalog entry aligns with the backlog domains-026 task; the gate must be run and a committed artifact produced before the pack is built.",
+  "objective": "Apply the licensegate-002 gate to Pfam/InterPro (CC0), produce a committed PASS artifact, and deliver a protein domain coordinate track on hg38 mapped to gene coordinates, with per-feature provenance.",
+  "acceptanceCriteria": [
+    "Source is Pfam/InterPro (CC0); licensegate-002 PASS artifact committed with permitsRedistribution: true and nonCommercial: false.",
+    "coordgate-003 PASS artifact committed for hg38; protein domain coordinates mapped to genomic coordinates on hg38 and recorded.",
+    "All three browser targets emitted and render-verified; protein domain features appear at expected gene-coordinate loci on hg38 with evidence in outcomes/ds-pfam-008.json.",
+    "Per-feature provenance records Pfam/InterPro domain accessions, source release version, and CC0 license; provenance completeness score ≥ 90/100.",
+    "Pack carries not-medical-advice notice; hosted at a loadable URL; adoption evidence or blocker recorded."
+  ],
+  "resources": [
+    "InterPro downloads (CC0): https://www.ebi.ac.uk/interpro/download/",
+    "Pfam downloads (CC0): https://pfam.xfam.org/",
+    "PLAN.md §7 (Pfam/InterPro source entry — Accept A)",
+    "tasks/genome-browser-tracks-catalog-014.json"
+  ],
+  "output": "output/packs/pfam-domains-hg38/ — BED/bigBed track files, browser configs, gate artifacts, manifest, and outcomes/ds-pfam-008.json.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

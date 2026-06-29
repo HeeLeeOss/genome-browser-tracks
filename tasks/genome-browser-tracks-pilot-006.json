@@ -1,0 +1,35 @@
+{
+  "id": "genome-browser-tracks-pilot-006",
+  "title": "Pilot pack: open cancer driver-gene track (Open Targets CC0 x GENCODE, hg38)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "To prove the end-to-end build flow and de-risk the cold-start problem, M0 requires one pilot pack built from a clearly-permissive Priority-A source and verified loadable in a real browser. The chosen source is Open Targets (CC0) target lists projected onto GENCODE gene models on hg38 — both are Priority-A and have no redistribution restrictions. The pilot also validates the license+data-tier gate, coordinate/assembly gate, manifest model, and UCSC hub generator in a real build, and demonstrates self-serve hosting so the hub URL is loadable by anyone without a partner.",
+  "objective": "Build the pilot cancer driver-gene track pack (Open Targets CC0 target list x GENCODE on hg38) end-to-end: pass both gates, build bigBed track files with per-feature provenance, emit a UCSC hub, render-verify it, host it at a loadable URL, and record the outcome or surface the adoption blocker.",
+  "acceptanceCriteria": [
+    "Source is Open Targets (CC0) target list projected onto GENCODE gene models on hg38; licensegate-002 PASS artifact is committed with permitsRedistribution: true and cited clause/URL.",
+    "coordgate-003 PASS artifact is committed recording the assembly (hg38), coordinate convention, and format validation result.",
+    "bigBed track file(s) built with per-feature provenance (source, release, record ID, license); provenance completeness score ≥ 90/100 recorded in the manifest.",
+    "UCSC hub emitted (hub.txt, genomes.txt, trackDb.txt), hubCheck clean, and render-verified by loading into UCSC or JBrowse and confirming cancer driver-gene features appear at expected loci on hg38 with evidence recorded in outcomes/pilot-006.json.",
+    "Pack hosted at a self-serve loadable URL (GitHub Pages or Zenodo) with attribution and an explicit not-medical-advice notice.",
+    "outcomes/pilot-006.json records render evidence and adoption status (confirmed use by a third party, or the adoption blocker explicitly surfaced); verifiedNeed updated to true only on confirmed adoption."
+  ],
+  "resources": [
+    "Open Targets Platform (CC0): https://www.opentargets.org/",
+    "GENCODE gene models: https://www.gencodegenes.org/",
+    "PLAN.md §6 (Pipeline) and §9 M0",
+    "tasks/genome-browser-tracks-licensegate-002.json",
+    "tasks/genome-browser-tracks-coordgate-003.json"
+  ],
+  "output": "output/packs/pilot-driver-genes-hg38/ — bigBed track file(s), UCSC hub files, manifest JSON, gate artifacts, and outcomes/pilot-006.json render/adoption evidence.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

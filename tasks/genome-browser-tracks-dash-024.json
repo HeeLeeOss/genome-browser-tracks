@@ -1,0 +1,30 @@
+{
+  "id": "genome-browser-tracks-dash-024",
+  "title": "Outcome dashboard (adoption + render evidence)",
+  "project": "genome-browser-tracks",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["open-science", "genomics"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "As the project delivers more packs and records adoption events in the outcome ledger, the Steward needs a simple way to visualise adoption status, render evidence, and provenance completeness scores across all packs. This backlog task adds an outcome dashboard that reads the outcome ledger and pack manifests and emits a summary report, making the success metrics table in PLAN.md §4 machine-readable and auditable.",
+  "objective": "Implement an outcome dashboard tool that reads all outcomes/<pack-id>.json and pack manifests, and emits a summary report covering adoption events, render evidence status, and provenance completeness scores per pack.",
+  "acceptanceCriteria": [
+    "Dashboard reads all outcomes/<pack-id>.json files and pack manifests; emits a per-pack summary of adoption status, render evidence, and provenance completeness score.",
+    "Summary report is machine-readable (JSON or Markdown) and auditable against the success metrics targets in PLAN.md §4.",
+    "At least one test fixture with synthetic outcome data exercises the report output.",
+    "Code is MIT-licensed; pnpm build && pnpm test && pnpm lint pass; no credentials embedded; commit is DCO signed-off."
+  ],
+  "resources": [
+    "PLAN.md §4 (Success metrics)",
+    "tasks/genome-browser-tracks-effort-018.json"
+  ],
+  "output": "packages/dashboard/src/ — outcome dashboard tool; submitted as a PR.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

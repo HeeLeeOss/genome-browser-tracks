@@ -1,0 +1,32 @@
+{
+  "id": "ds-cbioportal-011",
+  "title": "cBioPortal aggregated study results track pack (per-study gate required)",
+  "project": "genome-browser-tracks",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "genomics", "open-science", "bioinformatics"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "cBioPortal hosts aggregated cancer genomics study results from many institutions, each with its own data license (CC-BY, ODC, or custom). This is a Priority-B source requiring per-study license verification — redistribution terms for derivative tracks vary and must be confirmed before any pack is built. The catalog-014 triage resolves which cBioPortal studies are APPROVED for redistribution; this task then builds a track pack from an approved study only.",
+  "objective": "Verify redistribution rights for a specific cBioPortal study through catalog-014, run the licensegate-002 gate, and if APPROVED, build an aggregate cBioPortal study track pack on hg38.",
+  "acceptanceCriteria": [
+    "At least one specific cBioPortal study is confirmed APPROVED in catalog-014 with cited redistribution terms (CC-BY, ODC, or verified custom) and permitsRedistribution: true.",
+    "Re-identification check run and PASS recorded; track is derived from aggregate study results, not individual-level genotypes.",
+    "licensegate-002 and coordgate-003 PASS artifacts committed for the selected study.",
+    "If gate FAILS or re-identification signal is found, task is marked EXCLUDED with the reason documented and no track is built.",
+    "If gate PASSES: all three browser targets emitted and render-verified; per-feature provenance records cBioPortal study ID, data version, and license; provenance completeness ≥ 90/100; not-medical-advice notice present."
+  ],
+  "resources": [
+    "cBioPortal data access: https://www.cbioportal.org/",
+    "PLAN.md §7 (cBioPortal — Verify B → gate per study)",
+    "tasks/genome-browser-tracks-catalog-014.json"
+  ],
+  "output": "output/packs/cbioportal-study-hg38/ — aggregate track file(s), browser configs, gate artifacts, manifest, and outcomes/ds-cbioportal-011.json (or EXCLUDED record if gate fails).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
