@@ -224,10 +224,10 @@ into all three browsers from one manifest.**
   canonical "cancer driver genes on GRCh38" educational pack and the Reactome pathway-membership track (CC-BY
   attribution preserved). The KG is the curation backbone; tracks are its spatial projection.
 - **Reusable "track-hub-as-data" framework (horizontal spin-off):** the manifest→3-browser projector + dual gate
-  is **domain-agnostic**. Generalize it into an Elyos building block any open-data deed can use to publish
+  is **domain-agnostic**. Generalize it into a Hee-Lee Oss building block any open-data deed can use to publish
   license-clean, provenance-tracked, render-verified hubs (rare disease, microbiology, plant genomes). recount3
   proves the demand for generated hubs; we add curation + multi-browser + provenance.
-- **MCP server serving tracks (perpendicular):** an Elyos **"cancer-tracks" MCP server** that lets an agent
+- **MCP server serving tracks (perpendicular):** a Hee-Lee Oss **"cancer-tracks" MCP server** that lets an agent
   query "show me the driver-gene track for KRAS on hg38" and returns the pack URL + provenance + a JBrowse/IGV
   deep-link. Complements (does not duplicate) the existing read-only UCSC MCP server and aligns with the MCPmed
   call for MCP-enabled bioinformatics services. Reuses the manifest as the MCP resource model.

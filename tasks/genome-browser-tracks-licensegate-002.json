@@ -22,9 +22,9 @@
     "Document output licensed CC-BY-4.0; commit is DCO signed-off."
   ],
   "resources": [
-    "C:\\code\\elyos\\planning\\projects\\genome-browser-tracks\\PLAN.md",
-    "C:\\code\\elyos\\planning\\ROADMAP.md",
-    "C:\\code\\elyos\\docs\\good-deed-definition.md",
+    "C:\\code\\hee-lee-oss\\planning\\projects\\genome-browser-tracks\\PLAN.md",
+    "C:\\code\\hee-lee-oss\\planning\\ROADMAP.md",
+    "C:\\code\\hee-lee-oss\\docs\\good-deed-definition.md",
     "SPDX license list; CC0 / CC-BY 4.0 / public-domain terms"
   ],
   "output": "A committed license + data-tier gate checklist plus the per-source PASS/FLAG/EXCLUDE artifact template, ready for use by every per-source pack task.",

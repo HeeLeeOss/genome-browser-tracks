@@ -88,7 +88,7 @@ no partner is assumed. The cold-start is de-risked by self-serve hosting (below)
   every track so any feature can be traced to its open source.
 - Host packs so they are **loadable by URL** (self-serve: GitHub Pages / Zenodo) and, where useful,
   listed in public hub registries.
-- Keep the engine **agent-neutral and vendor-neutral** per Elyos architecture rules: no
+- Keep the engine **agent-neutral and vendor-neutral** per Hee-Lee Oss architecture rules: no
   agent-specific logic in the core; browser-specific projection logic isolated in adapters.
 
 **Non-goals**
@@ -204,13 +204,13 @@ nonCommercial:boolean, snapshotRef}, dataTier(open|aggregate|deidentified), attr
 {from,to,chain,unmappedCount}}`, `provenanceCompleteness {score}`, `riskTier`,
 `reviewers {license, bioinformatics, oncologist?, advocate?}`, `hosting {hubUrl, jbrowseUrl, igvUrl}`.
 
-**Tech stack.** TypeScript, ESM, pnpm workspaces (Elyos convention). Tools are thin Node wrappers
+**Tech stack.** TypeScript, ESM, pnpm workspaces (Hee-Lee Oss convention). Tools are thin Node wrappers
 over **standard, trusted external CLIs** (UCSC userApps: `bedToBigBed`, `bedSort`, `fetchChromSizes`,
 `liftOver`, `hubCheck`, `validateFiles`; htslib: `bgzip`, `tabix`) — we do not reimplement genomics
 primitives. Manifests/configs are JSON; tracks are standard formats. No runtime service; everything
 runs locally or in CI. External CLI versions are **pinned and recorded** per pack (see Dependencies).
 
-**Agent-neutrality (Elyos rule).** The canonical manifest, gate, and validators are vendor-neutral
+**Agent-neutrality (Hee-Lee Oss rule).** The canonical manifest, gate, and validators are vendor-neutral
 core; each browser target (UCSC/JBrowse/IGV) is an isolated **adapter**. No coding-agent-specific
 logic anywhere. Donated lane only — the CLI prepares the workspace and opens PRs; a human runs their
 agent and submits.
@@ -235,7 +235,7 @@ agent and submits.
   license permits **redistribution of derivative works** under an open license. Open imaging tiers
   (open TCGA/CPTAC) are usable per their open-access terms; **COSMIC, the Cancer Gene Census, and
   OncoKB are NON-COMMERCIAL and are EXCLUDED** from open packs (we cannot redistribute derivative
-  tracks under an open license, and Elyos output must be openly licensed).
+  tracks under an open license, and Hee-Lee Oss output must be openly licensed).
 - **No medical advice.** Tracks are research/education artifacts. Every pack carries an explicit
   intended-use + "not medical advice" statement. Patient-facing content is education-only and
   requires **oncologist + patient-advocate sign-off** (`riskTier: high`).
@@ -413,7 +413,7 @@ example Task JSON.
   COSMIC/CGC/OncoKB and controlled-access excluded.
 - **Hosting/registries:** GitHub Pages / Zenodo (self-serve); UCSC public hub registry, JBrowse
   config registry (human-submitted). Output-only; no automated upload.
-- **Elyos pieces:** Task JSON schema (`packages/schema`), donated-lane CLI workspace/PR flow
+- **Hee-Lee Oss pieces:** Task JSON schema (`packages/schema`), donated-lane CLI workspace/PR flow
   (`packages/cli`), good-deed definition + refusal guardrails. No funded-lane/runner dependency.
 
 ## Risks & mitigations
@@ -440,7 +440,7 @@ example Task JSON.
   identities.
 - **Secrets handling:** no credentials needed by default. If a registry submission ever needs a
   token, the human submitting supplies it; tokens are never written into logs, receipts, configs, or
-  committed files (Elyos rule).
+  committed files (Hee-Lee Oss rule).
 - **Supply-chain:** external CLIs are pinned and checksummed; provenance/license snapshots are hashed
   (SHA-256). We verify source downloads against published checksums where available.
 - **Abuse/misuse prevention:** refuse and flag any task steering tracks toward clinical decision
@@ -475,11 +475,11 @@ example Task JSON.
 
 ## References
 
-- Elyos work rules — `C:\code\elyos\CLAUDE.md`
-- Good Deed Definition + risk tiers — `C:\code\elyos\docs\good-deed-definition.md`
-- Task JSON schema — `C:\code\elyos\packages\schema\src\schemas.ts`
-- Portfolio roadmap (Track 8 cancer guardrails) — `C:\code\elyos\planning\ROADMAP.md`
-- Sibling plan (license/provenance gate pattern) — `C:\code\elyos\planning\projects\open-data-datasheets\PLAN.md`
+- Hee-Lee Oss work rules — `C:\code\hee-lee-oss\CLAUDE.md`
+- Good Deed Definition + risk tiers — `C:\code\hee-lee-oss\docs\good-deed-definition.md`
+- Task JSON schema — `C:\code\hee-lee-oss\packages\schema\src\schemas.ts`
+- Portfolio roadmap (Track 8 cancer guardrails) — `C:\code\hee-lee-oss\planning\ROADMAP.md`
+- Sibling plan (license/provenance gate pattern) — `C:\code\hee-lee-oss\planning\projects\open-data-datasheets\PLAN.md`
 - UCSC Genome Browser track hubs / bigBed / bigWig formats; UCSC userApps (`bedToBigBed`, `liftOver`, `hubCheck`, `validateFiles`)
 - JBrowse 2 configuration; IGV session format
 - Reference assemblies GRCh38/hg38, GRCh37/hg19; liftOver chain files; VCF 4.x + htslib/tabix
@@ -520,7 +520,7 @@ above (and to `TASKS.md`). Each notes where it landed.
     bump task — §6, §12, risk table.
 13. **Wrap-not-reinvent decision** for genomics primitives (use trusted UCSC/htslib CLIs) — §6 key
     decisions and tech stack, reducing correctness risk.
-14. **Agent-neutral / vendor-neutral architecture** explicitly mapped to Elyos rules (core vs
+14. **Agent-neutral / vendor-neutral architecture** explicitly mapped to Hee-Lee Oss rules (core vs
     adapters; donated lane; no headless agent) — §6.
 15. **Deliverable type `dataset`** chosen for track packs (they *are* derived data files), distinct
     from `document` (configs/docs) and `pr` (code) — codified in `TASKS.md` field mapping; a
