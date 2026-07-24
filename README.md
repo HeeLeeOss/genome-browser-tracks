@@ -6,7 +6,7 @@ Cancer genomics knowledge is published across dozens of open resources — gene 
 
 **Definition of shipped:** (committed artifact); provenance complete (score ≥ 90/100); coordinate/assembly verified; format- and render-verified in ≥1 target browser on the declared assembly; published at a loadable URL with attribution and "not medical advice" notice; **and adopted/used by a beneficiary**
 
-This is an **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Platform: https://github.com/jdev1977/hee-lee-oss
+This is a **Hee-Lee Oss** good-deed project. Contributors pull a task, do it with their own coding agent, and open a PR. Get started: https://github.com/Hee-Lee-Oss-Projects/hee-lee-oss-downloads
 
 ## Plan
 - [PLAN.md](./PLAN.md) — robust enterprise plan (vision, architecture, roadmap, risks; includes an applied-improvements appendix + review sign-off)
